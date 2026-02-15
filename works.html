@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Works</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400&family=Inter:wght@400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">GIOSI PINNA</div>
+  <nav class="nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="works.html">Works</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="works">
+  <div class="works-inner">
+
+    <div class="works-top">
+      <h1>Works</h1>
+      <div class="filters">
+        <button class="filter active" data-filter="all">All</button>
+        <button class="filter" data-filter="painting">Paintings</button>
+        <button class="filter" data-filter="drawing">Drawings</button>
+        <button class="filter" data-filter="photo">Photography</button>
+        <button class="filter" data-filter="digital">Digital</button>
+      </div>
+    </div>
+
+    <div class="year-block">
+      <h2 class="year-title">2026</h2>
+      <div class="divider"></div>
+
+      <div class="works-grid">
+
+        <div class="work-item" data-category="painting">
+          <img src="images/IMG_0607.JPG" alt="Untitled, 2026" loading="lazy">
+          <div class="caption">
+            <strong>Untitled</strong>
+            <span>2026 · Oil on canvas · 120 × 100 cm</span>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="drawing">
+          <img src="images/IMG_0607.JPG" alt="Untitled, 2026" loading="lazy">
+          <div class="caption">
+            <strong>Untitled</strong>
+            <span>2026 · Oil on canvas · 120 × 100 cm</span>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="photo">
+          <img src="images/IMG_0607.JPG" alt="Untitled, 2026" loading="lazy">
+          <div class="caption">
+            <strong>Untitled</strong>
+            <span>2026 · Oil on canvas · 120 × 100 cm</span>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="digital">
+          <img src="images/2026/digital/untitled-01.jpg" alt="Untitled, 2026" loading="lazy">
+          <div class="caption">
+            <strong>Untitled</strong>
+            <span>2026 · Oil on canvas · 120 × 100 cm</span>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="digital">
+          <img src="images/2026/digital/untitled-02.jpg" alt="Untitled, 2026" loading="lazy">
+          <div class="caption">
+            <strong>Untitled</strong>
+            <span>2026 · Oil on canvas · 120 × 100 cm</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+       <div class="year-block">
+      <h2 class="year-title">2025</h2>
+      <div class="divider"></div>
+
+      <div class="works-grid">
+
+        <div class="work-item" data-category="painting">
+          <img src="images/2025/painting/corsica-01.jpg" alt="Untitled, 2025" loading="lazy">
+          <div class="caption">
+            <strong>Untitled</strong>
+            <span>2026 · Oil on canvas · 120 × 100 cm</span>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="painting">
+          <img src="images/2025/painting/wijngaardlaan-01.jpg" alt="Untitled, 2025" loading="lazy">
+          <div class="caption">
+            <strong>Untitled</strong>
+            <span>2026 · Oil on canvas · 120 × 100 cm</span>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="drawing">
+          <img src="images/IMG_0607.JPG" alt="Untitled, 2026" loading="lazy">
+          <div class="caption">
+            <strong>Untitled</strong>
+            <span>2026 · Oil on canvas · 120 × 100 cm</span>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="photo">
+          <img src="images/IMG_0607.JPG" alt="Untitled, 2026" loading="lazy">
+          <div class="caption">
+            <strong>Untitled</strong>
+            <span>2026 · Oil on canvas · 120 × 100 cm</span>
+          </div>
+        </div>
+
+        <div class="work-item" data-category="digital">
+          <img src="images/IMG_0607.JPG" alt="Untitled, 2026" loading="lazy">
+          <div class="caption">
+            <strong>Untitled</strong>
+            <span>2026 · Oil on canvas · 120 × 100 cm</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close">&times;</span>
+  <img class="lightbox-img" src="" alt="">
+</div>
+
+<script>
+/* FILTER */
+const filters = document.querySelectorAll('.filter');
+const items = document.querySelectorAll('.work-item');
+
+filters.forEach(button => {
+  button.addEventListener('click', () => {
+    filters.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    const filter = button.dataset.filter;
+
+    items.forEach(item => {
+      if (filter === "all" || item.dataset.category === filter) {
+        item.style.display = "block";
+      } else {
+        item.style.display = "none";
+      }
+    });
+  });
+});
+
+/* LIGHTBOX */
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.querySelector(".lightbox-img");
+const closeBtn = document.querySelector(".lightbox-close");
+
+items.forEach(item => {
+  item.addEventListener("click", () => {
+    const img = item.querySelector("img");
+    lightboxImg.src = img.src;
+    lightbox.classList.add("show");
+  });
+});
+
+closeBtn.addEventListener("click", () => {
+  lightbox.classList.remove("show");
+});
+
+lightbox.addEventListener("click", (e) => {
+  if (e.target === lightbox) {
+    lightbox.classList.remove("show");
+  }
+});
+</script>
+
+</body>
+</html>
