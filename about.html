@@ -5,27 +5,101 @@
   <title>About</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    /* Local page styles only for About (no global files changed) */
+    .about .works {
+      width: 100%;
+      padding: 32px 40px 120px; /* match .works spacing */
+    }
+
+    .about h1 {
+      font-family: 'EB Garamond', serif;
+      font-weight: 400;
+      font-size: 1.55rem; /* match .works h1 */
+      letter-spacing: 0.01em;
+      margin-bottom: 12px;
+    }
+
+    /* Ensure heading hierarchy: headings larger than body */
+    .about-list h3 {
+      font-family: 'Inter', sans-serif; /* swapped: use body font for subtitle */
+      font-weight: 500;
+      font-style: normal;
+      font-size: 1.00rem; /* slightly smaller */
+      letter-spacing: 0.02em;
+      margin: 18px 0 8px;
+      color: #111;
+    }
+
+    .about-list .divider {
+      margin: 0 0 18px 0;
+    }
+    .about-list p {
+      font-family: 'Inter', sans-serif; /* body text on about uses Inter */
+      font-style: normal;
+      font-weight: 400;
+      font-size: 0.90rem;
+      color: rgba(0,0,0,0.72);
+      line-height: 1.6;
+      margin: 6px 0 18px;
+      max-width: 780px;
+    }
+  </style>
 </head>
 <body>
 
 <header class="header">
-  <div class="logo">Your Name</div>
+  <div class="logo">Giosi Pinna</div>
   <nav class="nav">
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
+      <li><a href="about.html" class="active">About</a></li>
       <li><a href="works.html">Works</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
 </header>
 
-<main class="image-container">
-  <div style="max-width:600px;">
-    <h1>About</h1>
-    <p>
-      Hier komt je tekst. Kort, helder, veel witruimte.
-    </p>
+<main class="about">
+  <div class="works">
+    <div class="works-inner">
+      <div class="works-top">
+        <h1 class="sr-only">About</h1>
+      </div>
+
+      <div class="about-list">
+      <h3>Bio</h3>
+      <p class="about-body">Hier komt de biografie. Dit is een korte placeholder-tekst om de typografie en ruimte te tonen.</p>
+      <div class="divider"></div>
+
+      <h3>Education</h3>
+      <p class="about-body">Opleiding en relevante data. Plaatshoudertekst die later vervangen wordt.</p>
+      <div class="divider"></div>
+
+      <h3>Selected Exhibitions</h3>
+      <p class="about-body">Een selectie van tentoonstellingen. Deze tekst is tijdelijk en toont opmaak.</p>
+      <div class="divider"></div>
+
+      <h3>Selected Press</h3>
+      <p class="about-body">Kranten, tijdschriften en online vermeldingen. Voorbeeldtekst hier.</p>
+      <div class="divider"></div>
+
+      <h3>Selected Publications</h3>
+      <p class="about-body">Geselecteerde publicaties en catalogi. Plaatshouderregels worden later aangepast.</p>
+      <div class="divider"></div>
+
+      <h3>Collections</h3>
+      <p class="about-body">Collecties waarin werk zich bevindt. Tijdelijke tekst ter illustratie.</p>
+      <div class="divider"></div>
+
+      <h3>Awards</h3>
+      <p class="about-body">Prijzen en onderscheidingen. Placeholder tekst voor layout.</p>
+      <div class="divider"></div>
+
+      <h3>Lectures</h3>
+      <p class="about-body">Lezingen en presentaties. Deze voorbeeldtekst laat de body-opmaak zien.</p>
+      </div>
+    </div>
   </div>
 </main>
 

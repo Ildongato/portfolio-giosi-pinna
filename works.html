@@ -10,12 +10,12 @@
 <body>
 
 <header class="header">
-  <div class="logo">GIOSI PINNA</div>
+  <div class="logo">Giosi Pinna</div>
   <nav class="nav">
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="works.html">Works</a></li>
+      <li><a href="works.html" class="active">Works</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
   </nav>
@@ -24,8 +24,8 @@
 <main class="works">
   <div class="works-inner">
 
-    <div class="works-top">
-      <h1>Works</h1>
+    <div class="works-top center-filters">
+      <h1 class="sr-only">Works</h1>
       <div class="filters">
         <button class="filter active" data-filter="all">All</button>
         <button class="filter" data-filter="painting">Paintings</button>
@@ -83,14 +83,95 @@
         </div>
 
                 <div class="work-item" data-category="digital">
-          <img src="images/2026/digital/untitled-03.jpg" alt="Untitled, 2026" loading="lazy">
-          <div class="caption">
-            <strong>Untitled</strong>
-            <span>2026 · Oil on canvas · 120 × 100 cm</span>
-          </div>
-        </div>
+                  <img src="images/2026/digital/untitled-03.jpg" alt="Untitled, 2026" loading="lazy">
+                  <div class="caption">
+                    <strong>Untitled</strong>
+                    <span>2026 · Oil on canvas · 120 × 100 cm</span>
+                  </div>
+                </div>
 
-      </div>
+                <!-- 2026 drawings added from images/2026/drawing -->
+                <div class="work-item" data-category="drawing">
+                  <img src="images/2026/drawing/untitled-void-01.jpg" alt="Untitled Void 01, 2026" loading="lazy">
+                  <div class="caption">
+                    <strong>Untitled Void 01</strong>
+                    <span>2026 · Drawing</span>
+                  </div>
+                </div>
+
+                <div class="work-item" data-category="drawing">
+                  <img src="images/2026/drawing/untitled-void-02.jpg" alt="Untitled Void 02, 2026" loading="lazy">
+                  <div class="caption">
+                    <strong>Untitled Void 02</strong>
+                    <span>2026 · Drawing</span>
+                  </div>
+                </div>
+
+                <div class="work-item" data-category="drawing">
+                  <img src="images/2026/drawing/untitled-void-03.jpg" alt="Untitled Void 03, 2026" loading="lazy">
+                  <div class="caption">
+                    <strong>Untitled Void 03</strong>
+                    <span>2026 · Drawing</span>
+                  </div>
+                </div>
+
+                <div class="work-item" data-category="drawing">
+                  <img src="images/2026/drawing/untitled-void-04.jpg" alt="Untitled Void 04, 2026" loading="lazy">
+                  <div class="caption">
+                    <strong>Untitled Void 04</strong>
+                    <span>2026 · Drawing</span>
+                  </div>
+                </div>
+
+                <div class="work-item" data-category="drawing">
+                  <img src="images/2026/drawing/untitled-void-05.jpg" alt="Untitled Void 05, 2026" loading="lazy">
+                  <div class="caption">
+                    <strong>Untitled Void 05</strong>
+                    <span>2026 · Drawing</span>
+                  </div>
+                </div>
+
+                <div class="work-item" data-category="drawing">
+                  <img src="images/2026/drawing/untitled-void-06.jpg" alt="Untitled Void 06, 2026" loading="lazy">
+                  <div class="caption">
+                    <strong>Untitled Void 06</strong>
+                    <span>2026 · Drawing</span>
+                  </div>
+                </div>
+
+                <div class="work-item" data-category="drawing">
+                  <img src="images/2026/drawing/untitled-void-07.jpg" alt="Untitled Void 07, 2026" loading="lazy">
+                  <div class="caption">
+                    <strong>Untitled Void 07</strong>
+                    <span>2026 · Drawing</span>
+                  </div>
+                </div>
+
+                <div class="work-item" data-category="drawing">
+                  <img src="images/2026/drawing/untitled-void-08.jpg" alt="Untitled Void 08, 2026" loading="lazy">
+                  <div class="caption">
+                    <strong>Untitled Void 08</strong>
+                    <span>2026 · Drawing</span>
+                  </div>
+                </div>
+
+                <div class="work-item" data-category="drawing">
+                  <img src="images/2026/drawing/untitled-void-09.jpg" alt="Untitled Void 09, 2026" loading="lazy">
+                  <div class="caption">
+                    <strong>Untitled Void 09</strong>
+                    <span>2026 · Drawing</span>
+                  </div>
+                </div>
+
+                <div class="work-item" data-category="drawing">
+                  <img src="images/2026/drawing/untitled-void-10.jpg" alt="Untitled Void 10, 2026" loading="lazy">
+                  <div class="caption">
+                    <strong>Untitled Void 10</strong>
+                    <span>2026 · Drawing</span>
+                  </div>
+                </div>
+
+              </div>
     </div>
 
        <div class="year-block">
@@ -147,8 +228,21 @@
 
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox">
-  <span class="lightbox-close">&times;</span>
-  <img class="lightbox-img" src="" alt="">
+  <div class="lightbox-panel">
+    <button class="lightbox-close" aria-label="Close">&times;</button>
+    <button class="lightbox-nav prev" aria-label="Previous">‹</button>
+    <div class="lightbox-content">
+      <img class="lightbox-img" src="" alt="">
+    </div>
+    <button class="lightbox-nav next" aria-label="Next">›</button>
+    <div class="lightbox-meta">
+      <div class="meta-left">
+        <strong class="meta-title"></strong>
+        <span class="meta-desc"></span>
+      </div>
+      <span class="meta-year"></span>
+    </div>
+  </div>
 </div>
 
 <script>
@@ -173,26 +267,85 @@ filters.forEach(button => {
   });
 });
 
-/* LIGHTBOX */
+/* LIGHTBOX WITH METADATA */
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.querySelector(".lightbox-img");
 const closeBtn = document.querySelector(".lightbox-close");
+const metaTitle = document.querySelector('.meta-title');
+const metaDesc = document.querySelector('.meta-desc');
+const metaYear = document.querySelector('.meta-year');
+const prevBtn = document.querySelector('.lightbox-nav.prev');
+const nextBtn = document.querySelector('.lightbox-nav.next');
 
-items.forEach(item => {
-  item.addEventListener("click", () => {
-    const img = item.querySelector("img");
-    lightboxImg.src = img.src;
-    lightbox.classList.add("show");
+const allItems = Array.from(items);
+let currentVisible = [];
+let currentIndex = -1;
+
+function updateVisibleItems() {
+  currentVisible = allItems.filter(i => i.style.display !== 'none');
+}
+
+function showLightboxAt(idx) {
+  const item = currentVisible[idx];
+  if (!item) return;
+  const img = item.querySelector('img');
+  const titleEl = item.querySelector('.caption strong');
+  const descEl = item.querySelector('.caption span');
+
+  lightboxImg.src = img.src;
+  lightboxImg.alt = img.alt || '';
+  metaTitle.textContent = titleEl ? titleEl.textContent : '';
+  metaDesc.textContent = descEl ? descEl.textContent : '';
+  // extract year from surrounding year-block heading
+  const yearBlock = item.closest('.year-block');
+  const yearEl = yearBlock ? yearBlock.querySelector('.year-title') : null;
+  metaYear.textContent = yearEl ? yearEl.textContent.trim() : '';
+
+  currentIndex = idx;
+  // disable/enable nav
+  prevBtn.disabled = (currentIndex <= 0);
+  nextBtn.disabled = (currentIndex >= currentVisible.length - 1);
+
+  lightbox.classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+allItems.forEach(item => {
+  item.addEventListener('click', (e) => {
+    updateVisibleItems();
+    const idx = currentVisible.indexOf(item);
+    showLightboxAt(idx);
   });
 });
 
-closeBtn.addEventListener("click", () => {
-  lightbox.classList.remove("show");
+prevBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  if (currentIndex > 0) showLightboxAt(currentIndex - 1);
 });
+
+nextBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  if (currentIndex < currentVisible.length - 1) showLightboxAt(currentIndex + 1);
+});
+
+// keyboard support
+document.addEventListener('keydown', (e) => {
+  if (!lightbox.classList.contains('show')) return;
+  if (e.key === 'ArrowLeft') prevBtn.click();
+  if (e.key === 'ArrowRight') nextBtn.click();
+  if (e.key === 'Escape') closeLightbox();
+});
+
+function closeLightbox() {
+  lightbox.classList.remove("show");
+  document.body.style.overflow = '';
+}
+
+closeBtn.addEventListener("click", closeLightbox);
 
 lightbox.addEventListener("click", (e) => {
   if (e.target === lightbox) {
-    lightbox.classList.remove("show");
+    closeLightbox();
   }
 });
 </script>
