@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html lang="nl">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Home</title>
+<link href="style.css" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+
+<script defer="" src="script.js"></script>
+</head>
+<body>
+<header class="header"><div class="header-inner grid-6"><a class="logo" href="index.html">Giosi Pinna</a><nav aria-label="Primary" class="nav"><ul><li><a href="about.html">About</a></li><li><a href="works.html">Works</a></li><li><a href="contact.html">Contact</a></li></ul></nav></div></header>
+<section class="hero">
+<img alt="Artwork" class="hero-image" id="mainImage" src="images/Gallery.jpg"/>
+</section>
+<script>
+  window.addEventListener("load", function() {
+    document.getElementById("mainImage").classList.add("loaded");
+  });
+</script>
+</body>
+</html>
