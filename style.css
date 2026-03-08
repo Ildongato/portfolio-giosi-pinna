@@ -133,19 +133,34 @@ h1,
   .header{
     padding: 22px var(--page-pad);
   }
-  .grid-6{
-    grid-template-columns: 1fr;
-    row-gap: 14px;
+
+  .header-inner{
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    align-items: center;
   }
+
   .logo{
-    grid-column: auto;
+    grid-column: 1 / span 2;
   }
+
   .nav{
-    grid-column: auto;
+    grid-column: 3 / span 4;
+    justify-self: end;
   }
+
   .nav ul{
-    grid-template-columns: repeat(3, auto);
-    column-gap: 18px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .nav li{
+    justify-content: flex-end;
+  }
+
+  .nav a{
+    white-space: nowrap;
   }
 }
 /* =========================
@@ -156,7 +171,7 @@ h1,
   width: 100%;
   height: calc(100vh - 104px);
   overflow: hidden;
-  padding: 0 40px;
+  padding: 0 var(--page-pad);
 }
 
 .hero-image {
