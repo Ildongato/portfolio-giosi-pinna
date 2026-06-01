@@ -518,9 +518,33 @@ h1,
 .lightbox-nav:disabled { opacity: 0.18; cursor: default; }
 
 @media (max-width: 700px) {
-  .lightbox-nav { font-size: 1.6rem; }
+  .lightbox-close {
+    top: 10px;
+    right: 12px;
+  }
+
+  .lightbox-content {
+    padding: 48px 18px 8px;
+  }
+
+  .lightbox-img {
+    max-width: 92vw;
+    max-height: calc(100svh - 150px);
+  }
+
+  .lightbox-meta {
+    padding: 14px 18px;
+  }
+
+  .lightbox-nav {
+    font-size: 1.6rem;
+    padding: 8px;
+  }
+
   /* ensure the white panel fills viewport on small screens to avoid side gaps */
   .lightbox-panel { max-width: 100%; left: 0; right: 0; }
+  .lightbox-nav.prev { left: 6px; }
+  .lightbox-nav.next { right: 6px; }
 }
 
 
