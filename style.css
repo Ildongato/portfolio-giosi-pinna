@@ -573,6 +573,45 @@ h1,
   max-width: 780px;
 }
 
+.exhibition-list{
+  display: grid;
+  gap: 8px;
+  margin: 6px 0 18px;
+  max-width: 980px;
+}
+
+.exhibition-entry{
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  column-gap: 28px;
+  align-items: baseline;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1.65;
+  color: rgba(0,0,0,0.72);
+}
+
+.exhibition-year{
+  color: rgba(0,0,0,0.58);
+}
+
+.exhibition-detail{
+  min-width: 0;
+}
+
+@media (max-width: 620px){
+  .exhibition-list{
+    gap: 12px;
+  }
+
+  .exhibition-entry{
+    grid-template-columns: 1fr;
+    row-gap: 2px;
+  }
+}
+
 
 
 /* =========================
