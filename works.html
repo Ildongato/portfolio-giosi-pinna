@@ -16,6 +16,13 @@
 <div class="year-block">
 <div class="works-grid">
 <div class="work-item" data-category="painting">
+<img alt="Mentre, 2026" loading="lazy" src="assets/images/thumbs/2026/painting/mentre/mentre-01.webp" data-full="assets/images/full/2026/painting/mentre/mentre-01.jpg" data-gallery="assets/images/full/2026/painting/mentre/mentre-01.jpg|assets/images/full/2026/painting/mentre/mentre-02.jpg|assets/images/full/2026/painting/mentre/mentre-03.jpg|assets/images/full/2026/painting/mentre/mentre-04.jpg|assets/images/full/2026/painting/mentre/mentre-05.jpg|assets/images/full/2026/painting/mentre/mentre-06.jpg|assets/images/full/2026/painting/mentre/mentre-07.jpg|assets/images/full/2026/painting/mentre/mentre-08.jpg" decoding="async"/>
+<div class="caption">
+<strong>Mentre</strong>
+<span>2026 · oil, acrylic, plaster on wood · 168 x 168 cm</span>
+</div>
+</div>
+<div class="work-item" data-category="painting">
 <img alt="Untitled, 2026" loading="lazy" src="assets/images/thumbs/2026/painting/circle-of-days-01.webp" data-full="assets/images/full/2026/painting/circle-of-days-01.jpg" decoding="async"/>
 <div class="caption">
 <strong>Untitled</strong>
@@ -226,9 +233,37 @@ const nextBtn = document.querySelector('.lightbox-nav.next');
 const allItems = Array.from(items);
 let currentVisible = [];
 let currentIndex = -1;
+let currentGallery = [];
+let currentGalleryIndex = 0;
+let currentMetaYear = '';
 
 function updateVisibleItems() {
   currentVisible = allItems.filter(i => i.style.display !== 'none');
+}
+
+function getGallerySources(img) {
+  if (img.dataset.gallery) {
+    return img.dataset.gallery.split('|').filter(Boolean);
+  }
+  return [img.dataset.full || img.src];
+}
+
+function updateLightboxImage() {
+  const fullSrc = currentGallery[currentGalleryIndex];
+  if (!fullSrc) return;
+  lightboxImg.removeAttribute('src');
+  lightboxImg.src = fullSrc;
+  metaYear.textContent = currentGallery.length > 1
+    ? `${currentGalleryIndex + 1} / ${currentGallery.length}`
+    : currentMetaYear;
+
+  if (currentGallery.length > 1) {
+    prevBtn.disabled = (currentGalleryIndex <= 0);
+    nextBtn.disabled = (currentGalleryIndex >= currentGallery.length - 1);
+  } else {
+    prevBtn.disabled = (currentIndex <= 0);
+    nextBtn.disabled = (currentIndex >= currentVisible.length - 1);
+  }
 }
 
 function showLightboxAt(idx) {
@@ -238,22 +273,17 @@ function showLightboxAt(idx) {
   const titleEl = item.querySelector('.caption strong');
   const descEl = item.querySelector('.caption span');
 
-  const fullSrc = img.dataset.full || img.src;
-  lightboxImg.removeAttribute('src');
-  lightboxImg.src = fullSrc;
+  currentIndex = idx;
+  currentGallery = getGallerySources(img);
+  currentGalleryIndex = 0;
   lightboxImg.alt = img.alt || '';
   metaTitle.textContent = titleEl ? titleEl.textContent : '';
   metaDesc.textContent = descEl ? descEl.textContent : '';
   // extract year from caption (before the first dot separator)
   const raw = descEl ? descEl.textContent : '';
-  const year = raw.split('·')[0].trim();
-  metaYear.textContent = year;
+  currentMetaYear = raw.split('·')[0].trim();
 
-  currentIndex = idx;
-  // disable/enable nav
-  prevBtn.disabled = (currentIndex <= 0);
-  nextBtn.disabled = (currentIndex >= currentVisible.length - 1);
-
+  updateLightboxImage();
   lightbox.classList.add('show');
   document.body.style.overflow = 'hidden';
 }
@@ -268,12 +298,26 @@ allItems.forEach(item => {
 
 prevBtn.addEventListener('click', (e) => {
   e.stopPropagation();
-  if (currentIndex > 0) showLightboxAt(currentIndex - 1);
+  if (currentGallery.length > 1) {
+    if (currentGalleryIndex > 0) {
+      currentGalleryIndex -= 1;
+      updateLightboxImage();
+    }
+  } else if (currentIndex > 0) {
+    showLightboxAt(currentIndex - 1);
+  }
 });
 
 nextBtn.addEventListener('click', (e) => {
   e.stopPropagation();
-  if (currentIndex < currentVisible.length - 1) showLightboxAt(currentIndex + 1);
+  if (currentGallery.length > 1) {
+    if (currentGalleryIndex < currentGallery.length - 1) {
+      currentGalleryIndex += 1;
+      updateLightboxImage();
+    }
+  } else if (currentIndex < currentVisible.length - 1) {
+    showLightboxAt(currentIndex + 1);
+  }
 });
 
 // keyboard support
