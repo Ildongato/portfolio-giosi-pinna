@@ -644,6 +644,7 @@ h1,
 .lightbox-content {
   flex: 1 1 auto;
   display: flex;
+  touch-action: pan-y;
   justify-content: center;
   align-items: center;
   padding: 48px 28px 12px 28px; /* more space top so image isn't full-bleed */
@@ -652,6 +653,8 @@ h1,
 .lightbox-img {
   max-width: 84vw; /* keep gutters left/right */
   max-height: calc(100vh - 170px); /* leave space for meta and top padding */
+  -webkit-user-drag: none;
+  user-select: none;
   width: auto;
   height: auto;
   object-fit: contain;

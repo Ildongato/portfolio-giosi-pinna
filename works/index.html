@@ -5,7 +5,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Works</title>
-<link href="/style.css?v=20260622-available-lightbox" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="/style.css?v=20260622-works-swipe" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
 
 <script defer="" src="/script.js"></script>
 </head>
@@ -335,6 +335,7 @@ filters.forEach(button => {
 /* LIGHTBOX WITH METADATA */
 const lightbox = document.getElementById("lightbox");
 const lightboxImg = document.querySelector(".lightbox-img");
+const lightboxContent = document.querySelector(".lightbox-content");
 const closeBtn = document.querySelector(".lightbox-close");
 const metaTitle = document.querySelector('.meta-title');
 const metaDesc = document.querySelector('.meta-desc');
@@ -408,8 +409,7 @@ allItems.forEach(item => {
   });
 });
 
-prevBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
+function goPrev() {
   if (currentGallery.length > 1) {
     if (currentGalleryIndex > 0) {
       currentGalleryIndex -= 1;
@@ -418,10 +418,9 @@ prevBtn.addEventListener('click', (e) => {
   } else if (currentIndex > 0) {
     showLightboxAt(currentIndex - 1);
   }
-});
+}
 
-nextBtn.addEventListener('click', (e) => {
-  e.stopPropagation();
+function goNext() {
   if (currentGallery.length > 1) {
     if (currentGalleryIndex < currentGallery.length - 1) {
       currentGalleryIndex += 1;
@@ -430,13 +429,102 @@ nextBtn.addEventListener('click', (e) => {
   } else if (currentIndex < currentVisible.length - 1) {
     showLightboxAt(currentIndex + 1);
   }
+}
+
+prevBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  goPrev();
 });
+
+nextBtn.addEventListener('click', (e) => {
+  e.stopPropagation();
+  goNext();
+});
+
+let swipeStartX = 0;
+let swipeStartY = 0;
+let swipeCurrentX = 0;
+let swipeCurrentY = 0;
+let swipeActive = false;
+
+function beginSwipe(x, y) {
+  if (!lightbox.classList.contains('show')) return;
+  swipeActive = true;
+  swipeStartX = x;
+  swipeStartY = y;
+  swipeCurrentX = x;
+  swipeCurrentY = y;
+}
+
+function moveSwipe(x, y) {
+  if (!swipeActive) return;
+  swipeCurrentX = x;
+  swipeCurrentY = y;
+}
+
+function finishSwipe(x, y) {
+  if (!swipeActive) return;
+  swipeCurrentX = x;
+  swipeCurrentY = y;
+
+  const deltaX = swipeCurrentX - swipeStartX;
+  const deltaY = swipeCurrentY - swipeStartY;
+  swipeActive = false;
+
+  if (Math.abs(deltaX) < 45 || Math.abs(deltaX) < Math.abs(deltaY) * 1.25) return;
+
+  if (deltaX < 0) {
+    goNext();
+  } else {
+    goPrev();
+  }
+}
+
+function cancelSwipe() {
+  swipeActive = false;
+}
+
+if (window.PointerEvent) {
+  lightboxContent.addEventListener('pointerdown', (e) => {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    beginSwipe(e.clientX, e.clientY);
+    lightboxContent.setPointerCapture?.(e.pointerId);
+  });
+
+  lightboxContent.addEventListener('pointermove', (e) => {
+    moveSwipe(e.clientX, e.clientY);
+  });
+
+  lightboxContent.addEventListener('pointerup', (e) => {
+    finishSwipe(e.clientX, e.clientY);
+    lightboxContent.releasePointerCapture?.(e.pointerId);
+  });
+
+  lightboxContent.addEventListener('pointercancel', cancelSwipe);
+} else {
+  lightboxContent.addEventListener('touchstart', (e) => {
+    if (e.touches.length !== 1) return;
+    beginSwipe(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+
+  lightboxContent.addEventListener('touchmove', (e) => {
+    if (e.touches.length !== 1) return;
+    moveSwipe(e.touches[0].clientX, e.touches[0].clientY);
+  }, { passive: true });
+
+  lightboxContent.addEventListener('touchend', (e) => {
+    if (!e.changedTouches.length) return;
+    finishSwipe(e.changedTouches[0].clientX, e.changedTouches[0].clientY);
+  }, { passive: true });
+
+  lightboxContent.addEventListener('touchcancel', cancelSwipe, { passive: true });
+}
 
 // keyboard support
 document.addEventListener('keydown', (e) => {
   if (!lightbox.classList.contains('show')) return;
-  if (e.key === 'ArrowLeft') prevBtn.click();
-  if (e.key === 'ArrowRight') nextBtn.click();
+  if (e.key === 'ArrowLeft') goPrev();
+  if (e.key === 'ArrowRight') goNext();
   if (e.key === 'Escape') closeLightbox();
 });
 
