@@ -379,7 +379,7 @@ h1,
   font-family: 'Inter', sans-serif;
   font-weight: 400;
   font-style: italic;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   letter-spacing: 0.01em;
   margin-bottom: 0;
   color: var(--text);
@@ -396,7 +396,9 @@ h1,
 
 .available-caption .available-price {
   display: block;
-  color: rgba(0, 0, 0, 0.62);
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--muted);
   white-space: nowrap;
 }
 
@@ -535,11 +537,24 @@ h1,
   opacity: 1;
 }
 
+@media (hover: none), (pointer: coarse) {
+  .works:not(.available-works) .work-item:hover img {
+    opacity: 1;
+  }
+
+  .works:not(.available-works) .caption,
+  .works:not(.available-works) .work-item:hover .caption {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
 /* Titel */
 
 .caption strong {
   display: block;
-  font-size: 0.9rem; /* ±14px */
+  font-size: 0.85rem;
   font-style: italic;
   margin-bottom: 4px;
 }
@@ -584,6 +599,21 @@ h1,
 }
 
 @media (max-width: 600px) {
+  .works:not(.available-works) .works-section-nav {
+    margin-bottom: 42px;
+  }
+
+  .works:not(.available-works) .work-item:hover img {
+    opacity: 1;
+  }
+
+  .works:not(.available-works) .caption,
+  .works:not(.available-works) .work-item:hover .caption {
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+  }
+
   .works-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
