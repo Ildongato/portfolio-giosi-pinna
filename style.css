@@ -181,6 +181,12 @@ h1,
   display: block;
 }
 
+.hero picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
 /* =========================
    WORKS SECTION
 ========================= */
@@ -304,7 +310,25 @@ h1,
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: contain;
+  display: block;
   transition: opacity 0.2s ease;
+}
+
+.work-item picture {
+  display: block;
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.work-item picture > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  object-fit: contain;
 }
 
 .work-item:hover img {
@@ -671,6 +695,11 @@ h1,
   width: 100%;
   height: auto;
   display: block;
+}
+
+.contact-photo picture{
+  display: block;
+  width: 100%;
 }
 
 /* small screens: stack */
