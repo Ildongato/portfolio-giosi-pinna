@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "optimize:images": "node scripts/optimize-images.js"
+    "optimize:images": "node scripts/optimize-images.js",
+    "optimize:views": "node scripts/optimize-images.js --views-only"
   },
   "devDependencies": {
     "sharp": "^0.35.2"

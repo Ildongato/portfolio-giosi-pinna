@@ -70,6 +70,12 @@
           "src": "assets/images/site/home-gallery/thumb/gallery-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 1600,
+      "webp": "assets/images/site/home-gallery/view/gallery.webp",
+      "jpeg": "assets/images/site/home-gallery/view/gallery.jpg"
     }
   },
   "assets/images/site/portrait/full/giosi.jpg": {
@@ -128,6 +134,12 @@
           "src": "assets/images/site/portrait/thumb/giosi-1200.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1366,
+      "height": 2048,
+      "webp": "assets/images/site/portrait/view/giosi.webp",
+      "jpeg": "assets/images/site/portrait/view/giosi.jpg"
     }
   },
   "assets/images/site/studio/full/10-10-25.jpg": {
@@ -274,6 +286,12 @@
           "src": "assets/images/works/2025/painting/after-lee-miller/thumb/after-lee-miller-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 2400,
+      "webp": "assets/images/works/2025/painting/after-lee-miller/view/after-lee-miller-01.webp",
+      "jpeg": "assets/images/works/2025/painting/after-lee-miller/view/after-lee-miller-01.jpg"
     }
   },
   "assets/images/works/2025/painting/alexander/full/alexander-01.jpg": {
@@ -347,6 +365,12 @@
           "src": "assets/images/works/2025/painting/alexander/thumb/alexander-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 2400,
+      "webp": "assets/images/works/2025/painting/alexander/view/alexander-01.webp",
+      "jpeg": "assets/images/works/2025/painting/alexander/view/alexander-01.jpg"
     }
   },
   "assets/images/works/2025/painting/corsica/full/corsica-01.jpg": {
@@ -405,6 +429,12 @@
           "src": "assets/images/works/2025/painting/corsica/thumb/corsica-01-1200.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1468,
+      "height": 1477,
+      "webp": "assets/images/works/2025/painting/corsica/view/corsica-01.webp",
+      "jpeg": "assets/images/works/2025/painting/corsica/view/corsica-01.jpg"
     }
   },
   "assets/images/works/2025/painting/mourning/full/mourning-01.jpg": {
@@ -478,6 +508,12 @@
           "src": "assets/images/works/2025/painting/mourning/thumb/mourning-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 2400,
+      "webp": "assets/images/works/2025/painting/mourning/view/mourning-01.webp",
+      "jpeg": "assets/images/works/2025/painting/mourning/view/mourning-01.jpg"
     }
   },
   "assets/images/works/2025/painting/nera/full/nera-01.jpg": {
@@ -551,6 +587,12 @@
           "src": "assets/images/works/2025/painting/nera/thumb/nera-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 2400,
+      "webp": "assets/images/works/2025/painting/nera/view/nera-01.webp",
+      "jpeg": "assets/images/works/2025/painting/nera/view/nera-01.jpg"
     }
   },
   "assets/images/works/2025/painting/pieta/full/pieta-01.jpg": {
@@ -624,6 +666,12 @@
           "src": "assets/images/works/2025/painting/pieta/thumb/pieta-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 2400,
+      "webp": "assets/images/works/2025/painting/pieta/view/pieta-01.webp",
+      "jpeg": "assets/images/works/2025/painting/pieta/view/pieta-01.jpg"
     }
   },
   "assets/images/works/2025/painting/porto-pino/full/porto-pino-01.jpg": {
@@ -697,6 +745,12 @@
           "src": "assets/images/works/2025/painting/porto-pino/thumb/porto-pino-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 2400,
+      "webp": "assets/images/works/2025/painting/porto-pino/view/porto-pino-01.webp",
+      "jpeg": "assets/images/works/2025/painting/porto-pino/view/porto-pino-01.jpg"
     }
   },
   "assets/images/works/2025/painting/rocce/full/rocce-01.jpg": {
@@ -770,6 +824,12 @@
           "src": "assets/images/works/2025/painting/rocce/thumb/rocce-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 2400,
+      "webp": "assets/images/works/2025/painting/rocce/view/rocce-01.webp",
+      "jpeg": "assets/images/works/2025/painting/rocce/view/rocce-01.jpg"
     }
   },
   "assets/images/works/2025/painting/roma/full/roma-01.jpg": {
@@ -813,6 +873,12 @@
           "src": "assets/images/works/2025/painting/roma/thumb/roma-01-800.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1080,
+      "height": 1350,
+      "webp": "assets/images/works/2025/painting/roma/view/roma-01.webp",
+      "jpeg": "assets/images/works/2025/painting/roma/view/roma-01.jpg"
     }
   },
   "assets/images/works/2025/painting/still-life/full/still-life.jpg": {
@@ -886,6 +952,12 @@
           "src": "assets/images/works/2025/painting/still-life/thumb/still-life-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 2400,
+      "webp": "assets/images/works/2025/painting/still-life/view/still-life.webp",
+      "jpeg": "assets/images/works/2025/painting/still-life/view/still-life.jpg"
     }
   },
   "assets/images/works/2025/painting/untitled-01/full/untitled-01.jpg": {
@@ -959,6 +1031,12 @@
           "src": "assets/images/works/2025/painting/untitled-01/thumb/untitled-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 2400,
+      "webp": "assets/images/works/2025/painting/untitled-01/view/untitled-01.webp",
+      "jpeg": "assets/images/works/2025/painting/untitled-01/view/untitled-01.jpg"
     }
   },
   "assets/images/works/2025/painting/untitled-02/full/untitled-02.jpg": {
@@ -1032,6 +1110,12 @@
           "src": "assets/images/works/2025/painting/untitled-02/thumb/untitled-02-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 2400,
+      "webp": "assets/images/works/2025/painting/untitled-02/view/untitled-02.webp",
+      "jpeg": "assets/images/works/2025/painting/untitled-02/view/untitled-02.jpg"
     }
   },
   "assets/images/works/2025/painting/war-time/full/war-time-01.jpg": {
@@ -1105,6 +1189,12 @@
           "src": "assets/images/works/2025/painting/war-time/thumb/war-time-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 2400,
+      "webp": "assets/images/works/2025/painting/war-time/view/war-time-01.webp",
+      "jpeg": "assets/images/works/2025/painting/war-time/view/war-time-01.jpg"
     }
   },
   "assets/images/works/2025/painting/wijngaardlaan/full/wijngaardlaan-01-installation.jpg": {
@@ -1178,6 +1268,12 @@
           "src": "assets/images/works/2025/painting/wijngaardlaan/thumb/wijngaardlaan-01-installation-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 1514,
+      "webp": "assets/images/works/2025/painting/wijngaardlaan/view/wijngaardlaan-01-installation.webp",
+      "jpeg": "assets/images/works/2025/painting/wijngaardlaan/view/wijngaardlaan-01-installation.jpg"
     }
   },
   "assets/images/works/2025/painting/wijngaardlaan/full/wijngaardlaan-01.jpg": {
@@ -1221,6 +1317,12 @@
           "src": "assets/images/works/2025/painting/wijngaardlaan/thumb/wijngaardlaan-01-800.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1196,
+      "height": 1644,
+      "webp": "assets/images/works/2025/painting/wijngaardlaan/view/wijngaardlaan-01.webp",
+      "jpeg": "assets/images/works/2025/painting/wijngaardlaan/view/wijngaardlaan-01.jpg"
     }
   },
   "assets/images/works/2025/painting/window-view/full/window-view-01.jpg": {
@@ -1294,6 +1396,12 @@
           "src": "assets/images/works/2025/painting/window-view/thumb/window-view-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 2400,
+      "webp": "assets/images/works/2025/painting/window-view/view/window-view-01.webp",
+      "jpeg": "assets/images/works/2025/painting/window-view/view/window-view-01.jpg"
     }
   },
   "assets/images/works/2026/digital/untitled-01/full/untitled-01.jpg": {
@@ -1367,6 +1475,12 @@
           "src": "assets/images/works/2026/digital/untitled-01/thumb/untitled-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1799,
+      "height": 2400,
+      "webp": "assets/images/works/2026/digital/untitled-01/view/untitled-01.webp",
+      "jpeg": "assets/images/works/2026/digital/untitled-01/view/untitled-01.jpg"
     }
   },
   "assets/images/works/2026/drawing/state/full/state-10.jpg": {
@@ -1440,6 +1554,12 @@
           "src": "assets/images/works/2026/drawing/state/thumb/state-10-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 2400,
+      "webp": "assets/images/works/2026/drawing/state/view/state-10.webp",
+      "jpeg": "assets/images/works/2026/drawing/state/view/state-10.jpg"
     }
   },
   "assets/images/works/2026/painting/all-hiding-places/full/all-hiding-places-01.jpg": {
@@ -1513,6 +1633,12 @@
           "src": "assets/images/works/2026/painting/all-hiding-places/thumb/all-hiding-places-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/all-hiding-places/view/all-hiding-places-01.webp",
+      "jpeg": "assets/images/works/2026/painting/all-hiding-places/view/all-hiding-places-01.jpg"
     }
   },
   "assets/images/works/2026/painting/circle-of-days/full/circle-of-days-01-installation.jpg": {
@@ -1586,6 +1712,12 @@
           "src": "assets/images/works/2026/painting/circle-of-days/thumb/circle-of-days-01-installation-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/circle-of-days/view/circle-of-days-01-installation.webp",
+      "jpeg": "assets/images/works/2026/painting/circle-of-days/view/circle-of-days-01-installation.jpg"
     }
   },
   "assets/images/works/2026/painting/circle-of-days/full/circle-of-days-01.jpg": {
@@ -1659,6 +1791,12 @@
           "src": "assets/images/works/2026/painting/circle-of-days/thumb/circle-of-days-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/circle-of-days/view/circle-of-days-01.webp",
+      "jpeg": "assets/images/works/2026/painting/circle-of-days/view/circle-of-days-01.jpg"
     }
   },
   "assets/images/works/2026/painting/exile/full/exile-01.jpg": {
@@ -1732,6 +1870,12 @@
           "src": "assets/images/works/2026/painting/exile/thumb/exile-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/exile/view/exile-01.webp",
+      "jpeg": "assets/images/works/2026/painting/exile/view/exile-01.jpg"
     }
   },
   "assets/images/works/2026/painting/exile/full/exile-02.jpg": {
@@ -1805,6 +1949,12 @@
           "src": "assets/images/works/2026/painting/exile/thumb/exile-02-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/exile/view/exile-02.webp",
+      "jpeg": "assets/images/works/2026/painting/exile/view/exile-02.jpg"
     }
   },
   "assets/images/works/2026/painting/exile/full/exile-03.jpg": {
@@ -1878,6 +2028,12 @@
           "src": "assets/images/works/2026/painting/exile/thumb/exile-03-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/exile/view/exile-03.webp",
+      "jpeg": "assets/images/works/2026/painting/exile/view/exile-03.jpg"
     }
   },
   "assets/images/works/2026/painting/exile/full/exile-04.jpg": {
@@ -1951,6 +2107,12 @@
           "src": "assets/images/works/2026/painting/exile/thumb/exile-04-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 1600,
+      "webp": "assets/images/works/2026/painting/exile/view/exile-04.webp",
+      "jpeg": "assets/images/works/2026/painting/exile/view/exile-04.jpg"
     }
   },
   "assets/images/works/2026/painting/exile/full/exile-05.jpg": {
@@ -2024,6 +2186,12 @@
           "src": "assets/images/works/2026/painting/exile/thumb/exile-05-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/exile/view/exile-05.webp",
+      "jpeg": "assets/images/works/2026/painting/exile/view/exile-05.jpg"
     }
   },
   "assets/images/works/2026/painting/forma-sospeso/full/forma-sospeso-01.jpg": {
@@ -2097,6 +2265,12 @@
           "src": "assets/images/works/2026/painting/forma-sospeso/thumb/forma-sospeso-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 1600,
+      "webp": "assets/images/works/2026/painting/forma-sospeso/view/forma-sospeso-01.webp",
+      "jpeg": "assets/images/works/2026/painting/forma-sospeso/view/forma-sospeso-01.jpg"
     }
   },
   "assets/images/works/2026/painting/forma-sospeso/full/forma-sospeso-02.jpg": {
@@ -2170,6 +2344,12 @@
           "src": "assets/images/works/2026/painting/forma-sospeso/thumb/forma-sospeso-02-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/forma-sospeso/view/forma-sospeso-02.webp",
+      "jpeg": "assets/images/works/2026/painting/forma-sospeso/view/forma-sospeso-02.jpg"
     }
   },
   "assets/images/works/2026/painting/forma-sospeso/full/forma-sospeso-03.jpg": {
@@ -2243,6 +2423,12 @@
           "src": "assets/images/works/2026/painting/forma-sospeso/thumb/forma-sospeso-03-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 1600,
+      "webp": "assets/images/works/2026/painting/forma-sospeso/view/forma-sospeso-03.webp",
+      "jpeg": "assets/images/works/2026/painting/forma-sospeso/view/forma-sospeso-03.jpg"
     }
   },
   "assets/images/works/2026/painting/forma-sospeso/full/forma-sospeso-04.jpg": {
@@ -2316,6 +2502,12 @@
           "src": "assets/images/works/2026/painting/forma-sospeso/thumb/forma-sospeso-04-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/forma-sospeso/view/forma-sospeso-04.webp",
+      "jpeg": "assets/images/works/2026/painting/forma-sospeso/view/forma-sospeso-04.jpg"
     }
   },
   "assets/images/works/2026/painting/forma-sospeso/full/forma-sospeso-05.jpg": {
@@ -2389,6 +2581,12 @@
           "src": "assets/images/works/2026/painting/forma-sospeso/thumb/forma-sospeso-05-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/forma-sospeso/view/forma-sospeso-05.webp",
+      "jpeg": "assets/images/works/2026/painting/forma-sospeso/view/forma-sospeso-05.jpg"
     }
   },
   "assets/images/works/2026/painting/forma-sospeso/full/forma-sospeso-06.jpg": {
@@ -2462,6 +2660,12 @@
           "src": "assets/images/works/2026/painting/forma-sospeso/thumb/forma-sospeso-06-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/forma-sospeso/view/forma-sospeso-06.webp",
+      "jpeg": "assets/images/works/2026/painting/forma-sospeso/view/forma-sospeso-06.jpg"
     }
   },
   "assets/images/works/2026/painting/forma-sospeso/full/forma-sospeso-07.jpg": {
@@ -2535,6 +2739,12 @@
           "src": "assets/images/works/2026/painting/forma-sospeso/thumb/forma-sospeso-07-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/forma-sospeso/view/forma-sospeso-07.webp",
+      "jpeg": "assets/images/works/2026/painting/forma-sospeso/view/forma-sospeso-07.jpg"
     }
   },
   "assets/images/works/2026/painting/insieme/full/insieme-01.jpg": {
@@ -2608,6 +2818,12 @@
           "src": "assets/images/works/2026/painting/insieme/thumb/insieme-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/insieme/view/insieme-01.webp",
+      "jpeg": "assets/images/works/2026/painting/insieme/view/insieme-01.jpg"
     }
   },
   "assets/images/works/2026/painting/lost-for-words/full/lost-for-words-01.jpg": {
@@ -2681,6 +2897,12 @@
           "src": "assets/images/works/2026/painting/lost-for-words/thumb/lost-for-words-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/lost-for-words/view/lost-for-words-01.webp",
+      "jpeg": "assets/images/works/2026/painting/lost-for-words/view/lost-for-words-01.jpg"
     }
   },
   "assets/images/works/2026/painting/lost/full/lost-01.jpg": {
@@ -2754,6 +2976,12 @@
           "src": "assets/images/works/2026/painting/lost/thumb/lost-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/lost/view/lost-01.webp",
+      "jpeg": "assets/images/works/2026/painting/lost/view/lost-01.jpg"
     }
   },
   "assets/images/works/2026/painting/mentre/full/mentre-01.jpg": {
@@ -2827,6 +3055,12 @@
           "src": "assets/images/works/2026/painting/mentre/thumb/mentre-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/mentre/view/mentre-01.webp",
+      "jpeg": "assets/images/works/2026/painting/mentre/view/mentre-01.jpg"
     }
   },
   "assets/images/works/2026/painting/mentre/full/mentre-02.jpg": {
@@ -2900,6 +3134,12 @@
           "src": "assets/images/works/2026/painting/mentre/thumb/mentre-02-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/mentre/view/mentre-02.webp",
+      "jpeg": "assets/images/works/2026/painting/mentre/view/mentre-02.jpg"
     }
   },
   "assets/images/works/2026/painting/mentre/full/mentre-03.jpg": {
@@ -2973,6 +3213,12 @@
           "src": "assets/images/works/2026/painting/mentre/thumb/mentre-03-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/mentre/view/mentre-03.webp",
+      "jpeg": "assets/images/works/2026/painting/mentre/view/mentre-03.jpg"
     }
   },
   "assets/images/works/2026/painting/mentre/full/mentre-04.jpg": {
@@ -3046,6 +3292,12 @@
           "src": "assets/images/works/2026/painting/mentre/thumb/mentre-04-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/mentre/view/mentre-04.webp",
+      "jpeg": "assets/images/works/2026/painting/mentre/view/mentre-04.jpg"
     }
   },
   "assets/images/works/2026/painting/mentre/full/mentre-05.jpg": {
@@ -3119,6 +3371,12 @@
           "src": "assets/images/works/2026/painting/mentre/thumb/mentre-05-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/mentre/view/mentre-05.webp",
+      "jpeg": "assets/images/works/2026/painting/mentre/view/mentre-05.jpg"
     }
   },
   "assets/images/works/2026/painting/mentre/full/mentre-06.jpg": {
@@ -3192,6 +3450,12 @@
           "src": "assets/images/works/2026/painting/mentre/thumb/mentre-06-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/mentre/view/mentre-06.webp",
+      "jpeg": "assets/images/works/2026/painting/mentre/view/mentre-06.jpg"
     }
   },
   "assets/images/works/2026/painting/mentre/full/mentre-07.jpg": {
@@ -3265,6 +3529,12 @@
           "src": "assets/images/works/2026/painting/mentre/thumb/mentre-07-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/mentre/view/mentre-07.webp",
+      "jpeg": "assets/images/works/2026/painting/mentre/view/mentre-07.jpg"
     }
   },
   "assets/images/works/2026/painting/mentre/full/mentre-08.jpg": {
@@ -3338,6 +3608,12 @@
           "src": "assets/images/works/2026/painting/mentre/thumb/mentre-08-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/mentre/view/mentre-08.webp",
+      "jpeg": "assets/images/works/2026/painting/mentre/view/mentre-08.jpg"
     }
   },
   "assets/images/works/2026/painting/over-painted/full/over-painted-01.jpg": {
@@ -3411,6 +3687,12 @@
           "src": "assets/images/works/2026/painting/over-painted/thumb/over-painted-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/over-painted/view/over-painted-01.webp",
+      "jpeg": "assets/images/works/2026/painting/over-painted/view/over-painted-01.jpg"
     }
   },
   "assets/images/works/2026/painting/stars-feelings/full/stars-feelings-01.jpg": {
@@ -3484,6 +3766,12 @@
           "src": "assets/images/works/2026/painting/stars-feelings/thumb/stars-feelings-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 1600,
+      "webp": "assets/images/works/2026/painting/stars-feelings/view/stars-feelings-01.webp",
+      "jpeg": "assets/images/works/2026/painting/stars-feelings/view/stars-feelings-01.jpg"
     }
   },
   "assets/images/works/2026/painting/stars-feelings/full/stars-feelings-02.jpg": {
@@ -3557,6 +3845,12 @@
           "src": "assets/images/works/2026/painting/stars-feelings/thumb/stars-feelings-02-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/stars-feelings/view/stars-feelings-02.webp",
+      "jpeg": "assets/images/works/2026/painting/stars-feelings/view/stars-feelings-02.jpg"
     }
   },
   "assets/images/works/2026/painting/stars-feelings/full/stars-feelings-03.jpg": {
@@ -3630,6 +3924,12 @@
           "src": "assets/images/works/2026/painting/stars-feelings/thumb/stars-feelings-03-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/stars-feelings/view/stars-feelings-03.webp",
+      "jpeg": "assets/images/works/2026/painting/stars-feelings/view/stars-feelings-03.jpg"
     }
   },
   "assets/images/works/2026/painting/stars-feelings/full/stars-feelings-04.jpg": {
@@ -3703,6 +4003,12 @@
           "src": "assets/images/works/2026/painting/stars-feelings/thumb/stars-feelings-04-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 1600,
+      "webp": "assets/images/works/2026/painting/stars-feelings/view/stars-feelings-04.webp",
+      "jpeg": "assets/images/works/2026/painting/stars-feelings/view/stars-feelings-04.jpg"
     }
   },
   "assets/images/works/2026/painting/stars-feelings/full/stars-feelings-05.jpg": {
@@ -3776,6 +4082,12 @@
           "src": "assets/images/works/2026/painting/stars-feelings/thumb/stars-feelings-05-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/stars-feelings/view/stars-feelings-05.webp",
+      "jpeg": "assets/images/works/2026/painting/stars-feelings/view/stars-feelings-05.jpg"
     }
   },
   "assets/images/works/2026/painting/stars-feelings/full/stars-feelings-06.jpg": {
@@ -3849,6 +4161,12 @@
           "src": "assets/images/works/2026/painting/stars-feelings/thumb/stars-feelings-06-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/stars-feelings/view/stars-feelings-06.webp",
+      "jpeg": "assets/images/works/2026/painting/stars-feelings/view/stars-feelings-06.jpg"
     }
   },
   "assets/images/works/2026/painting/stars-feelings/full/stars-feelings-07.jpg": {
@@ -3892,6 +4210,12 @@
           "src": "assets/images/works/2026/painting/stars-feelings/thumb/stars-feelings-07-800.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1080,
+      "height": 1350,
+      "webp": "assets/images/works/2026/painting/stars-feelings/view/stars-feelings-07.webp",
+      "jpeg": "assets/images/works/2026/painting/stars-feelings/view/stars-feelings-07.jpg"
     }
   },
   "assets/images/works/2026/painting/teste/full/teste-01.jpg": {
@@ -3965,6 +4289,12 @@
           "src": "assets/images/works/2026/painting/teste/thumb/teste-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/teste/view/teste-01.webp",
+      "jpeg": "assets/images/works/2026/painting/teste/view/teste-01.jpg"
     }
   },
   "assets/images/works/2026/painting/tra-due-mondi/full/tra-due-mondi-01.jpg": {
@@ -4038,6 +4368,12 @@
           "src": "assets/images/works/2026/painting/tra-due-mondi/thumb/tra-due-mondi-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/tra-due-mondi/view/tra-due-mondi-01.webp",
+      "jpeg": "assets/images/works/2026/painting/tra-due-mondi/view/tra-due-mondi-01.jpg"
     }
   },
   "assets/images/works/2026/painting/tra-due-mondi/full/tra-due-mondi-02.jpg": {
@@ -4111,6 +4447,12 @@
           "src": "assets/images/works/2026/painting/tra-due-mondi/thumb/tra-due-mondi-02-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/tra-due-mondi/view/tra-due-mondi-02.webp",
+      "jpeg": "assets/images/works/2026/painting/tra-due-mondi/view/tra-due-mondi-02.jpg"
     }
   },
   "assets/images/works/2026/painting/tra-due-mondi/full/tra-due-mondi-03.jpg": {
@@ -4184,6 +4526,12 @@
           "src": "assets/images/works/2026/painting/tra-due-mondi/thumb/tra-due-mondi-03-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 1600,
+      "webp": "assets/images/works/2026/painting/tra-due-mondi/view/tra-due-mondi-03.webp",
+      "jpeg": "assets/images/works/2026/painting/tra-due-mondi/view/tra-due-mondi-03.jpg"
     }
   },
   "assets/images/works/2026/painting/tra-due-mondi/full/tra-due-mondi-04.jpg": {
@@ -4257,6 +4605,12 @@
           "src": "assets/images/works/2026/painting/tra-due-mondi/thumb/tra-due-mondi-04-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/tra-due-mondi/view/tra-due-mondi-04.webp",
+      "jpeg": "assets/images/works/2026/painting/tra-due-mondi/view/tra-due-mondi-04.jpg"
     }
   },
   "assets/images/works/2026/painting/tra-due-mondi/full/tra-due-mondi-05.jpg": {
@@ -4330,6 +4684,12 @@
           "src": "assets/images/works/2026/painting/tra-due-mondi/thumb/tra-due-mondi-05-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/tra-due-mondi/view/tra-due-mondi-05.webp",
+      "jpeg": "assets/images/works/2026/painting/tra-due-mondi/view/tra-due-mondi-05.jpg"
     }
   },
   "assets/images/works/2026/painting/tra-due-mondi/full/tra-due-mondi-06.jpg": {
@@ -4403,6 +4763,12 @@
           "src": "assets/images/works/2026/painting/tra-due-mondi/thumb/tra-due-mondi-06-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/tra-due-mondi/view/tra-due-mondi-06.webp",
+      "jpeg": "assets/images/works/2026/painting/tra-due-mondi/view/tra-due-mondi-06.jpg"
     }
   },
   "assets/images/works/2026/painting/tra-due-mondi/full/tra-due-mondi-07.jpg": {
@@ -4476,6 +4842,12 @@
           "src": "assets/images/works/2026/painting/tra-due-mondi/thumb/tra-due-mondi-07-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/tra-due-mondi/view/tra-due-mondi-07.webp",
+      "jpeg": "assets/images/works/2026/painting/tra-due-mondi/view/tra-due-mondi-07.jpg"
     }
   },
   "assets/images/works/2026/painting/tra-due-mondi/full/tra-due-mondi-08.jpg": {
@@ -4549,6 +4921,12 @@
           "src": "assets/images/works/2026/painting/tra-due-mondi/thumb/tra-due-mondi-08-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/tra-due-mondi/view/tra-due-mondi-08.webp",
+      "jpeg": "assets/images/works/2026/painting/tra-due-mondi/view/tra-due-mondi-08.jpg"
     }
   },
   "assets/images/works/2026/painting/tra-due-mondi/full/tra-due-mondi-09.jpg": {
@@ -4622,6 +5000,12 @@
           "src": "assets/images/works/2026/painting/tra-due-mondi/thumb/tra-due-mondi-09-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 1600,
+      "webp": "assets/images/works/2026/painting/tra-due-mondi/view/tra-due-mondi-09.webp",
+      "jpeg": "assets/images/works/2026/painting/tra-due-mondi/view/tra-due-mondi-09.jpg"
     }
   },
   "assets/images/works/2026/painting/tra-due-mondi/full/tra-due-mondi-10.jpg": {
@@ -4695,6 +5079,12 @@
           "src": "assets/images/works/2026/painting/tra-due-mondi/thumb/tra-due-mondi-10-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 1600,
+      "webp": "assets/images/works/2026/painting/tra-due-mondi/view/tra-due-mondi-10.webp",
+      "jpeg": "assets/images/works/2026/painting/tra-due-mondi/view/tra-due-mondi-10.jpg"
     }
   },
   "assets/images/works/2026/painting/tra-due-mondi/full/tra-due-mondi-11.jpg": {
@@ -4768,6 +5158,12 @@
           "src": "assets/images/works/2026/painting/tra-due-mondi/thumb/tra-due-mondi-11-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 1600,
+      "webp": "assets/images/works/2026/painting/tra-due-mondi/view/tra-due-mondi-11.webp",
+      "jpeg": "assets/images/works/2026/painting/tra-due-mondi/view/tra-due-mondi-11.jpg"
     }
   },
   "assets/images/works/2026/painting/untitled-01/full/untitled-01.jpg": {
@@ -4841,6 +5237,12 @@
           "src": "assets/images/works/2026/painting/untitled-01/thumb/untitled-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/untitled-01/view/untitled-01.webp",
+      "jpeg": "assets/images/works/2026/painting/untitled-01/view/untitled-01.jpg"
     }
   },
   "assets/images/works/2026/painting/untitled-02/full/untitled-02-installation-01.jpg": {
@@ -4914,6 +5316,12 @@
           "src": "assets/images/works/2026/painting/untitled-02/thumb/untitled-02-installation-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1600,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/untitled-02/view/untitled-02-installation-01.webp",
+      "jpeg": "assets/images/works/2026/painting/untitled-02/view/untitled-02-installation-01.jpg"
     }
   },
   "assets/images/works/2026/painting/untitled-02/full/untitled-02-installation-02.jpg": {
@@ -4987,6 +5395,12 @@
           "src": "assets/images/works/2026/painting/untitled-02/thumb/untitled-02-installation-02-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 1600,
+      "webp": "assets/images/works/2026/painting/untitled-02/view/untitled-02-installation-02.webp",
+      "jpeg": "assets/images/works/2026/painting/untitled-02/view/untitled-02-installation-02.jpg"
     }
   },
   "assets/images/works/2026/painting/untitled-02/full/untitled-02-installation-03.jpg": {
@@ -5060,6 +5474,12 @@
           "src": "assets/images/works/2026/painting/untitled-02/thumb/untitled-02-installation-03-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 1600,
+      "webp": "assets/images/works/2026/painting/untitled-02/view/untitled-02-installation-03.webp",
+      "jpeg": "assets/images/works/2026/painting/untitled-02/view/untitled-02-installation-03.jpg"
     }
   },
   "assets/images/works/2026/painting/untitled-02/full/untitled-02.jpg": {
@@ -5133,6 +5553,12 @@
           "src": "assets/images/works/2026/painting/untitled-02/thumb/untitled-02-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 2400,
+      "height": 2400,
+      "webp": "assets/images/works/2026/painting/untitled-02/view/untitled-02.webp",
+      "jpeg": "assets/images/works/2026/painting/untitled-02/view/untitled-02.jpg"
     }
   },
   "assets/images/works/2026/works-on-paper/workonpaper-01/full/workonpaper-01.jpg": {
@@ -5206,6 +5632,12 @@
           "src": "assets/images/works/2026/works-on-paper/workonpaper-01/thumb/workonpaper-01-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1703,
+      "height": 2400,
+      "webp": "assets/images/works/2026/works-on-paper/workonpaper-01/view/workonpaper-01.webp",
+      "jpeg": "assets/images/works/2026/works-on-paper/workonpaper-01/view/workonpaper-01.jpg"
     }
   },
   "assets/images/works/2026/works-on-paper/workonpaper-02/full/workonpaper-02.jpg": {
@@ -5279,6 +5711,28 @@
           "src": "assets/images/works/2026/works-on-paper/workonpaper-02/thumb/workonpaper-02-1600.jpg"
         }
       ]
+    },
+    "view": {
+      "width": 1703,
+      "height": 2400,
+      "webp": "assets/images/works/2026/works-on-paper/workonpaper-02/view/workonpaper-02.webp",
+      "jpeg": "assets/images/works/2026/works-on-paper/workonpaper-02/view/workonpaper-02.jpg"
+    }
+  },
+  "assets/images/works/2026/painting/untitled-03/full/untitled-03.jpg": {
+    "original": "assets/images/works/2026/painting/untitled-03/full/untitled-03.jpg",
+    "width": 3149,
+    "height": 1987,
+    "view": {
+      "width": 2400,
+      "height": 1514,
+      "webp": "assets/images/works/2026/painting/untitled-03/view/untitled-03.webp",
+      "jpeg": "assets/images/works/2026/painting/untitled-03/view/untitled-03.jpg"
+    },
+    "variants": {
+      "avif": [],
+      "webp": [],
+      "jpeg": []
     }
   }
 }

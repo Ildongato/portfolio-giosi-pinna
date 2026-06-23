@@ -727,6 +727,7 @@ h1,
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 20px;
 }
 
 .lightbox-meta .meta-title {
@@ -751,6 +752,27 @@ h1,
   font-family: 'Inter', sans-serif;
   font-size: 0.9rem;
   opacity: 0.8;
+}
+
+.meta-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  flex: 0 0 auto;
+}
+
+.lightbox-full-link {
+  color: rgba(0,0,0,0.5);
+  font-size: 0.656rem;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.lightbox-full-link:hover {
+  color: #111;
 }
 
 /* NAV ARROWS */
@@ -807,6 +829,7 @@ h1,
 
   .lightbox-meta {
     padding: 14px 18px;
+    align-items: flex-end;
   }
 
   .lightbox-nav {

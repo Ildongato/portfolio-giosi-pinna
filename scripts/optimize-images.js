@@ -6,6 +6,8 @@ const root = path.resolve(__dirname, '..');
 const sourceRoot = path.join(root, 'assets', 'images');
 const manifestPath = path.join(sourceRoot, 'manifest.json');
 const widths = [480, 800, 1200, 1600];
+const viewMaxDimension = 2400;
+const viewsOnly = process.argv.includes('--views-only');
 const exts = new Set(['.jpg', '.jpeg', '.png']);
 
 async function exists(file) {
@@ -25,15 +27,15 @@ async function walk(dir) {
   return files;
 }
 
-async function removeThumbDirs(dir) {
+async function removeGeneratedDirs(dir, names) {
   if (!(await exists(dir))) return;
   const entries = await fs.readdir(dir, { withFileTypes: true });
   for (const entry of entries) {
     if (entry.name.startsWith('.')) continue;
     const full = path.join(dir, entry.name);
     if (!entry.isDirectory()) continue;
-    if (entry.name === 'thumb') await fs.rm(full, { recursive: true, force: true });
-    else await removeThumbDirs(full);
+    if (names.has(entry.name)) await fs.rm(full, { recursive: true, force: true });
+    else await removeGeneratedDirs(full, names);
   }
 }
 
@@ -50,6 +52,43 @@ function thumbDirFor(absPath) {
   return parts.join(path.sep);
 }
 
+function viewDirFor(absPath) {
+  const parts = absPath.split(path.sep);
+  const fullIndex = parts.lastIndexOf('full');
+  if (fullIndex === -1) return null;
+  parts[fullIndex] = 'view';
+  parts.pop();
+  return parts.join(path.sep);
+}
+
+async function createView(absPath, relPath, meta) {
+  const outDir = viewDirFor(absPath);
+  if (!outDir) return null;
+
+  const parsed = path.parse(relPath);
+  const scale = Math.min(1, viewMaxDimension / Math.max(meta.width, meta.height));
+  const viewWidth = Math.round(meta.width * scale);
+  const viewHeight = Math.round(meta.height * scale);
+  const webpName = `${parsed.name}.webp`;
+  const jpgName = `${parsed.name}.jpg`;
+  const webpPath = path.join(outDir, webpName);
+  const jpgPath = path.join(outDir, jpgName);
+  const base = sharp(absPath, { limitInputPixels: false })
+    .rotate()
+    .resize({ width: viewMaxDimension, height: viewMaxDimension, fit: 'inside', withoutEnlargement: true });
+
+  await fs.mkdir(outDir, { recursive: true });
+  await base.clone().webp({ quality: 82, effort: 5 }).toFile(webpPath);
+  await base.clone().jpeg({ quality: 82, mozjpeg: true }).toFile(jpgPath);
+
+  return {
+    width: viewWidth,
+    height: viewHeight,
+    webp: publicPath(path.relative(root, webpPath)),
+    jpeg: publicPath(path.relative(root, jpgPath)),
+  };
+}
+
 async function optimizeOne(absPath, relPath) {
   const outDir = thumbDirFor(absPath);
   if (!outDir) return null;
@@ -64,39 +103,49 @@ async function optimizeOne(absPath, relPath) {
   const finalWidths = [...new Set(candidates.length ? candidates : [meta.width])].sort((a, b) => a - b);
   const variants = { avif: [], webp: [], jpeg: [] };
 
-  await fs.mkdir(outDir, { recursive: true });
+  if (!viewsOnly) await fs.mkdir(outDir, { recursive: true });
 
-  for (const width of finalWidths) {
-    const height = Math.round((meta.height / meta.width) * width);
-    const base = sharp(absPath, { limitInputPixels: false }).rotate().resize({ width, withoutEnlargement: true });
+  if (!viewsOnly) {
+    for (const width of finalWidths) {
+      const height = Math.round((meta.height / meta.width) * width);
+      const base = sharp(absPath, { limitInputPixels: false }).rotate().resize({ width, withoutEnlargement: true });
 
-    const avifName = `${parsed.name}-${width}.avif`;
-    const webpName = `${parsed.name}-${width}.webp`;
-    const jpgName = `${parsed.name}-${width}.jpg`;
+      const avifName = `${parsed.name}-${width}.avif`;
+      const webpName = `${parsed.name}-${width}.webp`;
+      const jpgName = `${parsed.name}-${width}.jpg`;
 
-    const avifPath = path.join(outDir, avifName);
-    const webpPath = path.join(outDir, webpName);
-    const jpgPath = path.join(outDir, jpgName);
+      const avifPath = path.join(outDir, avifName);
+      const webpPath = path.join(outDir, webpName);
+      const jpgPath = path.join(outDir, jpgName);
 
-    await base.clone().avif({ quality: 50, effort: 4 }).toFile(avifPath);
-    await base.clone().webp({ quality: 80, effort: 5 }).toFile(webpPath);
-    await base.clone().jpeg({ quality: 80, mozjpeg: true }).toFile(jpgPath);
+      await base.clone().avif({ quality: 50, effort: 4 }).toFile(avifPath);
+      await base.clone().webp({ quality: 80, effort: 5 }).toFile(webpPath);
+      await base.clone().jpeg({ quality: 80, mozjpeg: true }).toFile(jpgPath);
 
-    variants.avif.push({ width, height, src: publicPath(path.relative(root, avifPath)) });
-    variants.webp.push({ width, height, src: publicPath(path.relative(root, webpPath)) });
-    variants.jpeg.push({ width, height, src: publicPath(path.relative(root, jpgPath)) });
+      variants.avif.push({ width, height, src: publicPath(path.relative(root, avifPath)) });
+      variants.webp.push({ width, height, src: publicPath(path.relative(root, webpPath)) });
+      variants.jpeg.push({ width, height, src: publicPath(path.relative(root, jpgPath)) });
+    }
   }
+
+  const view = await createView(absPath, relPath, meta);
 
   return {
     original: publicPath(relPath),
     width: meta.width,
     height: meta.height,
+    view,
     variants,
   };
 }
 
 async function main() {
-  await removeThumbDirs(sourceRoot);
+  await removeGeneratedDirs(sourceRoot, new Set(viewsOnly ? ['view'] : ['thumb', 'view']));
+
+  let previousManifest = {};
+  if (viewsOnly && await exists(manifestPath)) {
+    previousManifest = JSON.parse(await fs.readFile(manifestPath, 'utf8'));
+  }
 
   const allFiles = await walk(sourceRoot);
   const fullFiles = allFiles
@@ -110,7 +159,12 @@ async function main() {
     index += 1;
     console.log(`[${index}/${fullFiles.length}] ${publicPath(rel)}`);
     const result = await optimizeOne(path.join(root, rel), rel);
-    if (result) manifest[publicPath(rel)] = result;
+    if (result) {
+      const key = publicPath(rel);
+      manifest[key] = viewsOnly && previousManifest[key]
+        ? { ...previousManifest[key], width: result.width, height: result.height, view: result.view }
+        : result;
+    }
   }
 
   await fs.mkdir(path.dirname(manifestPath), { recursive: true });

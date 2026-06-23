@@ -6,9 +6,9 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="A selection of works on paper and occasional editions by Giosi Pinna, available directly from the studio." name="description"/>
 <title>Available Works | Giosi Pinna</title>
-<link href="/style.css?v=20260623-zoom-pointer" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="/style.css?v=20260623-lightbox-view" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
 
-<script defer="" src="/script.js?v=20260623-zoom-pointer"></script>
+<script defer="" src="/script.js?v=20260623-lightbox-view"></script>
 </head>
 <body>
 <header class="header"><div class="header-inner grid-6"><a class="logo" href="/">Giosi Pinna</a><nav aria-label="Primary" class="nav"><ul><li><a href="/about/">About</a></li><li><a aria-current="page" class="active" href="/works/">Works</a></li><li><a href="/contact/">Contact</a></li></ul></nav></div></header>
@@ -77,7 +77,10 @@
 <strong class="meta-title"></strong>
 <span class="meta-desc"></span>
 </div>
+<div class="meta-right">
 <span class="meta-year"></span>
+<a class="lightbox-full-link" href="#" target="_blank" rel="noopener">Full resolution</a>
+</div>
 </div>
 </div>
 </div>
@@ -89,9 +92,15 @@ const closeBtn = document.querySelector('.lightbox-close');
 const metaTitle = document.querySelector('.meta-title');
 const metaDesc = document.querySelector('.meta-desc');
 const metaYear = document.querySelector('.meta-year');
+const fullLink = document.querySelector('.lightbox-full-link');
 const prevBtn = document.querySelector('.lightbox-nav.prev');
 const nextBtn = document.querySelector('.lightbox-nav.next');
 let currentIndex = -1;
+
+function toViewSource(src) {
+  if (!src) return '';
+  return src.replace('/full/', '/view/').replace(/\.(jpe?g|png)$/i, '.webp');
+}
 
 function showLightboxAt(index) {
   const item = availableItems[index];
@@ -101,9 +110,32 @@ function showLightboxAt(index) {
   const details = Array.from(item.querySelectorAll('.available-caption > span')).map((span) => span.textContent.trim());
 
   currentIndex = index;
+  const fullSrc = img.dataset.full || img.currentSrc || img.src;
+  const viewSrc = toViewSource(fullSrc) || fullSrc;
+  const viewFallback = viewSrc.replace(/\.webp$/i, '.jpg');
   lightboxImg.removeAttribute('src');
   lightboxImg.alt = img.alt || '';
-  lightboxImg.src = img.dataset.full || img.currentSrc || img.src;
+  lightboxImg.dataset.full = fullSrc;
+  lightboxImg.dataset.viewFallback = viewFallback;
+  lightboxImg.onerror = () => {
+    const viewFallback = lightboxImg.dataset.viewFallback;
+    const fallback = lightboxImg.dataset.full;
+    const current = lightboxImg.currentSrc || lightboxImg.src;
+
+    if (viewFallback && current !== new URL(viewFallback, window.location.href).href) {
+      lightboxImg.src = viewFallback;
+      return;
+    }
+
+    if (fallback && current !== new URL(fallback, window.location.href).href) {
+      lightboxImg.src = fallback;
+    }
+  };
+  lightboxImg.src = viewSrc;
+  if (fullLink) {
+    fullLink.href = fullSrc || viewSrc || '#';
+    fullLink.hidden = !(fullSrc || viewSrc);
+  }
   metaTitle.textContent = title ? title.textContent : '';
   metaDesc.textContent = details.join(' · ');
   metaYear.textContent = '';
