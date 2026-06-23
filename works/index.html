@@ -5,9 +5,9 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Works</title>
-<link href="/style.css?v=20260623-lightbox-view" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="/style.css?v=20260623-pinch-zoom" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
 
-<script defer="" src="/script.js?v=20260623-lightbox-view"></script>
+<script defer="" src="/script.js?v=20260623-pinch-zoom"></script>
 </head>
 <body>
 <header class="header"><div class="header-inner grid-6"><a class="logo" href="/">Giosi Pinna</a><nav aria-label="Primary" class="nav"><ul><li><a href="/about/">About</a></li><li><a aria-current="page" class="active" href="/works/">Works</a></li><li><a href="/contact/">Contact</a></li></ul></nav></div></header>
@@ -474,8 +474,13 @@ let swipeCurrentX = 0;
 let swipeCurrentY = 0;
 let swipeActive = false;
 
+function isTouchZoomActive() {
+  return lightboxContent.classList.contains('is-touch-zooming')
+    || lightboxContent.classList.contains('is-touch-zoomed');
+}
+
 function beginSwipe(x, y) {
-  if (!lightbox.classList.contains('show')) return;
+  if (!lightbox.classList.contains('show') || isTouchZoomActive()) return;
   swipeActive = true;
   swipeStartX = x;
   swipeStartY = y;
@@ -484,12 +489,20 @@ function beginSwipe(x, y) {
 }
 
 function moveSwipe(x, y) {
+  if (isTouchZoomActive()) {
+    cancelSwipe();
+    return;
+  }
   if (!swipeActive) return;
   swipeCurrentX = x;
   swipeCurrentY = y;
 }
 
 function finishSwipe(x, y) {
+  if (isTouchZoomActive()) {
+    cancelSwipe();
+    return;
+  }
   if (!swipeActive) return;
   swipeCurrentX = x;
   swipeCurrentY = y;
@@ -514,6 +527,10 @@ function cancelSwipe() {
 if (window.PointerEvent) {
   lightboxContent.addEventListener('pointerdown', (e) => {
     if (e.pointerType === 'mouse' && e.button !== 0) return;
+    if (e.pointerType === 'touch' && !e.isPrimary) {
+      cancelSwipe();
+      return;
+    }
     beginSwipe(e.clientX, e.clientY);
     lightboxContent.setPointerCapture?.(e.pointerId);
   });

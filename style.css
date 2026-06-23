@@ -687,6 +687,7 @@ h1,
   max-width: 84vw; /* keep gutters left/right */
   max-height: calc(100vh - 170px); /* leave space for meta and top padding */
   line-height: 0;
+  touch-action: none;
 }
 
 .lightbox-img {
@@ -701,6 +702,12 @@ h1,
   transform-origin: var(--zoom-x, 50%) var(--zoom-y, 50%);
   transition: transform 180ms ease, opacity 0.2s ease;
   will-change: transform;
+  touch-action: none;
+}
+
+.lightbox-content.is-touch-zooming .lightbox-img,
+.lightbox-content.is-touch-zoomed .lightbox-img {
+  transition: none;
 }
 
 
