@@ -6,9 +6,9 @@
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <meta content="A selection of works on paper and occasional editions by Giosi Pinna, available directly from the studio." name="description"/>
 <title>Available Works | Giosi Pinna</title>
-<link href="/style.css?v=20260623-image-archive" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="/style.css?v=20260623-zoom-pointer" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
 
-<script defer="" src="/script.js"></script>
+<script defer="" src="/script.js?v=20260623-zoom-pointer"></script>
 </head>
 <body>
 <header class="header"><div class="header-inner grid-6"><a class="logo" href="/">Giosi Pinna</a><nav aria-label="Primary" class="nav"><ul><li><a href="/about/">About</a></li><li><a aria-current="page" class="active" href="/works/">Works</a></li><li><a href="/contact/">Contact</a></li></ul></nav></div></header>
@@ -69,7 +69,7 @@
 <button aria-label="Close" class="lightbox-close">×</button>
 <button aria-label="Previous" class="lightbox-nav prev">‹</button>
 <div class="lightbox-content">
-<img alt="" class="lightbox-img" decoding="async"/>
+<div class="lightbox-zoom-frame"><img alt="" class="lightbox-img" decoding="async"/></div>
 </div>
 <button aria-label="Next" class="lightbox-nav next">›</button>
 <div class="lightbox-meta">
@@ -109,6 +109,7 @@ function showLightboxAt(index) {
   metaYear.textContent = '';
   prevBtn.disabled = currentIndex <= 0;
   nextBtn.disabled = currentIndex >= availableItems.length - 1;
+  lightbox.dataset.zoomOpenedAt = String(Date.now());
   lightbox.classList.add('show');
   document.body.style.overflow = 'hidden';
 }
